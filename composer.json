@@ -1,0 +1,48 @@
+{
+    "name": "konceiver/picasso",
+    "description": "PHP Port of github.com/vechain/picasso",
+    "keywords": [
+        "konceiver",
+        "picasso"
+    ],
+    "homepage": "https://github.com/konceiver/picasso",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@konceiver.dev",
+            "homepage": "https://konceiver.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ruafozy/mersenne-twister": "^1.3",
+        "savvot/random": "^0.3.0"
+    },
+    "require-dev": {
+        "graham-campbell/analyzer": "^3.0",
+        "pestphp/pest": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Konceiver\\Picasso\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Konceiver\\Picasso\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:coverage": "vendor/bin/phpunit --coverage-html=.coverage --coverage-clover=clover.xml",
+        "format": "vendor/bin/php-cs-fixer fix ./",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=2G"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
